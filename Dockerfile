@@ -44,7 +44,7 @@ COPY src/etc/nginx          /etc/nginx
 COPY src/opt/lua-scripts    /opt/lua-scripts
 COPY src/srv/www            /srv/www
 
-# Helper scripts (entrypoint, healthcheck)
+# Helper scripts for container lifecycle (entrypoint, healthcheck)
 COPY --chown=nobody:nobody --chmod=0755 \
   src/usr/local/bin/entrypoint.sh   /usr/local/bin/entrypoint.sh
 COPY --chown=nobody:nobody --chmod=0755 \
